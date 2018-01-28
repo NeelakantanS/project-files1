@@ -1,0 +1,62 @@
+body {
+  min-height: 2000px;
+
+}
+.navbar {
+    background-color: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.6);
+  }
+  
+  .navbar li { color: #000 }
+
+.navbar-inverse .navbar-toggle {
+    border:none;
+}
+
+.navbar-inverse{
+    border: none;
+}
+.navbar-brand.logo {
+    margin: 1px 0px -6px 0px;
+}
+.icon-bar{
+    width: 4.5rem !important;
+    margin: .7rem!important ;
+}
+
+
+.logo{
+	background-image:url(http://www.webtechacademy.in/img/ahy_consulting.png);
+  	background-repeat:no-repeat;
+    background-size:contain;
+    width: 20rem;
+    padding-top: 5.85rem;
+    margin-top: -1.8rem;
+}
+
+.ml-auto{
+    margin-right: -7rem;
+    float: right;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        display:block !important;
+    }
+    .navbar-header {
+        float:none;
+    }
+    .container{
+        width: 100%;
+        padding: 0px;
+    }
+    .header-logo{
+        margin-left: 25px;
+    }
+}

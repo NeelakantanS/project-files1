@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://getbootstrap.com/docs/3.3/examples/starter-template/ -->
+<html lang="en" class="gr__getbootstrap_com">
+
+    <head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="https://getbootstrap.com/docs/3.3/favicon.ico">
+
+        <title>CHAT</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="./chat_files/bootstrap.min.css" rel="stylesheet">
+
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <link href="./chat_files/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="./chat_files/chat.css" rel="stylesheet">
+
+        <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+        <script src="./chat_files/ie-emulation-modes-warning.js.download"></script>
+
+  </head>
+
+  <body data-gr-c-s-loaded="true">
+
+   <div class="container">
+        
+          <div class="border">
+            <div class="responsive-html5-chat">
+                <form class="chat">
+                    <span></span>
+                    <div class="messages">
+                    </div>
+                    <div class="form-group msg-input mx-sm-3">
+                        <input type="text" class="form-control" id="input-message" placeholder="Your message">
+                        <button type="submit" class="btn btn-primary mb-2"></button>
+                    </div>
+                </form>
+            </div>
+          </div>
+        
+    </div><!-- /.chat container -->
+
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="./chat_files/jquery.min.js.download"></script>
+        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+        <script src="./chat_files/bootstrap.min.js.download"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="./chat_files/ie10-viewport-bug-workaround.js.download"></script>
+
+      <script>   
+            function responsiveChat(element) {
+               
+                function showLatestMessage() {
+                    $(element).find('.messages').scrollTop($(element).find('.messages').height());
+                }
+                showLatestMessage();
+
+
+                $(element + ' input[type="text"]').keypress(function (event) {
+                    if (event.which == 13) {
+                        event.preventDefault();
+                        $(element + ' input[type="submit"]').click();
+                    }
+                });
+                $(element + ' button[type="submit"]').click(function (event) {
+                    event.preventDefault();
+                    var message = $(element + ' input[type="text"]').val();
+                    if ($(element + ' input[type="text"]').val()) {
+                        var d = new Date();
+                        var clock = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+                        var month = d.getMonth() + 1;
+                        var day = d.getDate();
+                        var currentDate =
+                            (("" + day).length < 2 ? "0" : "") +
+                            day +
+                            "." +
+                            (("" + month).length < 2 ? "0" : "") +
+                            month +
+                            "." +
+                            d.getFullYear() +
+                            "&nbsp;&nbsp;" +
+                            clock;
+                        $(element + ' div.messages').append(
+                            '<div class="message"><div class="myMessage"><p>' +
+                            message +
+                            "</p><date>" +
+                            currentDate +
+                            "</date></div></div>"
+                        );
+                        setTimeout(function () {
+                            $(element + ' > span').addClass("spinner");
+                        }, 100);
+                        setTimeout(function () {
+                            $(element + ' > span').removeClass("spinner");
+                        }, 2000);
+                    }
+                    $(element + ' input[type="text"]').val("");
+                    showLatestMessage();
+                });
+            }
+
+            function responsiveChatPush(element, sender, origin, date, message) {
+                var originClass;
+                if (origin == 'me') {
+                    originClass = 'myMessage';
+                } else {
+                    originClass = 'fromThem';
+                }
+                $(element + ' .messages').append('<div class="message"><div class="' + originClass + '"><p>' + message + '</p><date><b>' + sender + '</b> ' + date + '</date></div></div>');
+            }
+
+            responsiveChat('.responsive-html5-chat');
+
+            responsiveChatPush('.chat', 'Kate', 'me', '08.03.2017 14:30:7', 'It looks beautiful!');
+            responsiveChatPush('.chat', 'John Doe', 'you', '08.03.2016 14:31:22', 'It looks like the iPhone message box.');
+            responsiveChatPush('.chat', 'Kate', 'me', '08.03.2016 14:33:32', 'Yep, is this design responsive?');
+            responsiveChatPush('.chat', 'Kate', 'me', '08.03.2016 14:36:4', 'By the way when I hover on my message it shows date.');
+            responsiveChatPush('.chat', 'John Doe', 'you', '08.03.2016 14:37:12', 'Yes, this is completely responsive.');
+
+        </script>
+
+    </body>
+
+</html>

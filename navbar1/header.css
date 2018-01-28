@@ -1,0 +1,288 @@
+@font-face {
+font-family: "raleway-reg";
+src: url("raleway/raleway-regular.eot");
+src: url("raleway/raleway-regular.woff") format("woff"),
+url("raleway/raleway-regular.ttf") format("ttf");
+}
+
+.wrapper{
+    
+    max-width: 89%;
+    height: 110px;
+    margin: auto;
+}
+.navbar{
+        
+    background-color: #f0f0f0;
+    border-radius: 0px;
+    
+}
+
+.navbar-toggle:hover {
+    background-color: #ddd;
+}   
+        .navbar-default .navbar-toggle {
+    border-color: #ddd;
+}
+
+.navbar-toggle
+{
+    position:relative;
+    float:right;
+    padding:9px 0px;
+    margin-top:8px;
+    margin-bottom:8px;
+    background-color:transparent;
+    background-image:none;
+    border: none;
+}
+    .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+            border: 0;
+        }
+        
+.navbar-toggle .icon-bar
+{
+    display:block;
+    width:32px;
+    height:1px;
+    margin: 7px;
+    border-radius:1px;
+    border:1px solid #fff;
+}
+
+.parent-header-anim-shrink .navbar-toggle .icon-bar
+{
+    display:block;
+    width:32px;
+    height:1px;
+    margin: 7px;
+    border-radius:1px;
+    border:1px solid gray;
+}
+
+.header-logo{
+    background-image: url(http://www.webtechacademy.in/img/ahy_consulting.png)!important;
+    background-repeat:no-repeat;
+    background-size:contain;
+    width:200px;
+    padding-top: 69px;
+}
+.navbar .btn-group .dropdown-menu a:hover {
+    color: #000 !important;
+}
+
+.navbar .btn-group .dropdown-menu a:active {
+    color: #fff !important;
+}
+nav{
+
+    background-color: #f0f0f0;
+}
+
+.navbar-toggle {
+display: none;
+}
+
+.parent-header-anim {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: rgba(0,0,0,0.3) !important;
+	z-index: 10000;
+	height: 70px;
+	overflow: hidden;
+	-webkit-transition: height 0.3s;
+	-moz-transition: height 0.3s;
+	transition: height 0.4s;
+	transition: background 0.3s;
+
+}
+
+.parent-header-anim a{
+    font-family: "raleway-reg";
+    font-size: 1.4em;
+}
+.parent-header-anim .child-header-anim {
+	width: 90%;
+	max-width: 69em;
+	margin: 0 auto;
+	padding: 0 1.875em;
+}
+
+.parent-header-anim navbar-brand, .header-logo,
+.parent-header-anim nav {
+	display: inline-block;
+	position: relative;
+}
+
+ /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
+.parent-header-anim navbar-brand .header-logo,
+.parent-header-anim nav a {
+	line-height: 110px;
+}
+
+.parent-header-anim navbar-brand, .header-logo{
+	margin: 0;
+	float: left;
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 4em;
+}
+
+.parent-header-anim nav {
+	float: right;
+}
+
+.parent-header-anim nav a {
+	color: #aaa !important;
+	font-weight: 700;
+	margin: 0 0 0 20px;
+	font-size: 1.4em;
+}
+
+.parent-header-anim nav a:hover {
+	color: #333 !important;
+}
+
+/* Transitions and class for reduced height */
+.parent-header-anim navbar-brand, .header-logo,
+.parent-header-anim nav a {
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.parent-header-anim-shrink {
+	height: 55px;
+    box-shadow: 0 0 3px 0;
+    background-color: #fff!important;
+    -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.parent-header-anim-shrink{
+  
+    background-color: #fff!important;
+    height: 55px;
+}
+
+.parent-header-anim.parent-header-anim-shrink navbar-brand, .header-logo,
+.parent-header-anim.parent-header-anim-shrink nav a {
+	line-height: 70px;
+    color: #000 !important;
+}
+
+.parent-header-anim-shrink .nav-item a{
+    color: #d3d3d3 !important;
+    font-size: 1.3em;
+}
+
+.parent-header-anim-shrink .header-logo{
+     background-repeat:no-repeat;
+     background-size:contain;
+     width:150px;
+     height: 55px;
+     top: 10px;
+}
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 992px){
+    
+    .navbar-toggle{
+        display: inline-block;
+    }
+    .parent-header-anim .child-header-anim {
+        padding: 0px !important;
+
+    }
+    
+    parent-header-anim {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10000;
+        height: 70px;
+        background: rgba(0,0,0,0.3) !important;
+        -webkit-transition: height 0.3s;
+        -moz-transition: height 0.3s;
+        transition: height 0.3s;
+        transition: background 0.3s;
+    }
+
+   .parent-header-anim .parent-header-anim-shrink {
+        
+        height: 55px;
+        background-color: #fff!important;
+        box-shadow: 0 0 5px 0;
+    }
+  .parent-header-anim-shrink  .navbar-toggler-icon{
+
+         background-image: url("./hamburger.png") !important;
+        background-size: 50px !important;
+
+    }
+}
+
+@media (max-width: 768px){
+    .parent-header-anim {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10000;
+        height: 70px;
+        background: rgba(0,0,0,0.3) !important;
+        -webkit-transition: height 0.3s;
+        -moz-transition: height 0.3s;
+        transition: height 0.3s;
+        transition: background 0.3s;
+    }
+
+    .parent-header-anim-shrink {
+        
+        height: 55px;
+        -webkit-transition: height 0.3s;
+        -moz-transition: height 0.3s;
+        transition: height 0.3s;
+        background-color: #fff!important;
+        box-shadow: 0 0 5px 0;
+    }
+    
+     .header-logo
+    {
+        padding-top: 58px !important;
+        width:160px;
+    }
+    .navbar-toggler
+    {
+        padding: 0px !important;
+    }
+}
+
+@media (max-width: 400px){
+    .header-logo
+    {
+        padding-top: 58px !important;
+        width:160px;
+    }
+    
+    .navbar-toggler
+    {
+        padding: 0px !important;
+    }
+    
+    .navbar-toggler-icon{
+        height: 35px;
+        width: 35px;    
+    }
+
+}
